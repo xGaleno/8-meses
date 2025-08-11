@@ -1,0 +1,59 @@
+:root{
+  --pink:#ff5fa2;
+  --pink-soft:#ff8fc0;
+  --bg:#000000;
+}
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  background: var(--bg);
+  color:#fff;
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+}
+#heart{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+/* Texto */
+.title{
+  position:fixed;
+  top:8vh;
+  left:50%;
+  transform:translateX(-50%);
+  text-align:center;
+  user-select:none;
+  pointer-events:none; /* que no interfiera con los toques en el canvas */
+  padding:0 16px;
+}
+.title h1{
+  margin:0;
+  line-height:1.15;
+  font-weight:700;
+  letter-spacing:.5px;
+  text-shadow: 0 0 12px rgba(255,95,162,.45);
+}
+.title h1 span{
+  color:var(--pink);
+  text-shadow:
+    0 0 18px rgba(255,95,162,.65),
+    0 0 36px rgba(255,143,192,.45);
+}
+.title .hint{
+  margin:.6rem 0 0 0;
+  font-weight:300;
+  font-size:.95rem;
+  opacity:.75;
+}
+
+/* Responsive tipografía */
+@media (max-width:480px){
+  .title h1{ font-size: 8vw; }
+}
+@media (min-width:481px){
+  .title h1{ font-size: 48px; }
+}
